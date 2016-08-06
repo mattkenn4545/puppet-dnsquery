@@ -16,7 +16,6 @@ module Puppet::Parser::Functions
     else
       res.getaddresses(arg).collect { |r| r.to_s }
     end
-    raise Resolv::ResolvError, "DNS result has no information for #{arg}" if ret.empty?
     ret
   end
 end

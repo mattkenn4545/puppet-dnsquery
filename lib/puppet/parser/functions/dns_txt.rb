@@ -9,7 +9,6 @@ module Puppet::Parser::Functions
     ret = Resolv::DNS.new.getresources(arguments[0],Resolv::DNS::Resource::IN::TXT).collect do |res|
       res.strings
     end
-    raise Resolv::ResolvError, "DNS result has no information for #{arguments[0]}" if ret.empty?
     ret
   end
 end

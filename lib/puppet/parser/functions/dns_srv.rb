@@ -25,7 +25,6 @@ module Puppet::Parser::Functions
         end
       end
     end
-    raise Resolv::ResolvError, "DNS result has no information for #{arguments[0]}" if ret.empty?
     ret
   end
 end
